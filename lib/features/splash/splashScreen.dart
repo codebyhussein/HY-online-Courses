@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:iconly/iconly.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:rokna/core/app_style.dart';
 import 'package:rokna/core/colors.dart';
+import 'package:rokna/features/onborading/presentation/cubit/onboading_cubit.dart';
+import 'package:rokna/features/onborading/presentation/screens/onborading_screen.dart';
 import 'package:rokna/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -51,10 +54,12 @@ class SplashScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.push(
                               context,
-                              PageTransition(
-                                  type: PageTransitionType.rightToLeft,
-                                  child: const HomeScreen(),
-                                  isIos: true));
+                              MaterialPageRoute(
+                                builder: (context) => BlocProvider(
+                                  create: (context) => OnboadingCubit(),
+                                  child: OnboardingScreen(),
+                                ),
+                              ));
                         },
                         icon: CircleAvatar(
                           radius: 30.r,
