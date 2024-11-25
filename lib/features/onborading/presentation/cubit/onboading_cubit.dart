@@ -24,4 +24,9 @@ class OnboadingCubit extends Cubit<OnboadingState> {
     controller!.jumpToPage(3);
     emit(OnboardingLastPage());
   }
+
+  void toggleSelection(bool isSelected) {
+    bool newSelectionState = !isSelected;
+    emit(IsselectedButton(isSelected: newSelectionState));
+  }
 }

@@ -15,4 +15,8 @@ class OnboardingLastPage extends OnboadingState {}
 
 class OnboardingPreviousPage extends OnboadingState {}
 
-class OnboardingProgress extends OnboadingState {}
+class IsselectedButton extends OnboadingState {
+  final bool isSelected;
+
+  const IsselectedButton({required this.isSelected});
+}
