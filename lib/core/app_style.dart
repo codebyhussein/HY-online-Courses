@@ -1,25 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rokna/core/colors.dart';
 
 class AppStyle {
   static TextStyle stlyle18Bold = TextStyle(
     fontSize: 18.sp, // Adjust size based on your design
     fontWeight: FontWeight.bold,
-    color: Colors.black, // Change color as needed
+    color: AppColors.mainTextColor,
   );
 
   static TextStyle style15Semibold = TextStyle(
     fontSize: 15.sp, // Adjust size based on your design
-    fontWeight: FontWeight.w600,
-    color: Colors.grey[700], // Change color as needed
+
+    fontFamily: 'PlusJakartaSans',
   );
 
-  static TextStyle style14Semibold = const TextStyle(
-    color: Color(0xFF01261C),
-    fontSize: 14,
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.bold,
+  static TextStyle style14Semibold = TextStyle(
+    color: const Color(0xff01261C),
+    fontSize: 12.sp,
     height: 0,
+    fontFamily: "PlusJakartaSans",
+    fontWeight: FontWeight.normal,
     letterSpacing: 0.56,
+  );
+
+  static TextStyle style30Semibold = TextStyle(
+    fontSize: 30.sp,
+    fontFamily: "PlusJakartaSans",
+    color: AppColors.mainTextColor,
   );
 }

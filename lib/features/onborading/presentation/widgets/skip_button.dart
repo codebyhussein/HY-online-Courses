@@ -16,8 +16,8 @@ class SkipButton extends StatelessWidget {
           TextButton(
             onPressed: onPressed,
             child: Container(
-              width: 60.w,
-              height: 30.h,
+              width: 61.w,
+              height: 37.h,
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               decoration: ShapeDecoration(
                 color: AppColors.secondaryColor,
@@ -25,7 +25,8 @@ class SkipButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20.r),
                 ),
               ),
-              child: Text(' Skip', style: AppStyle.style14Semibold),
+              child:
+                  Center(child: Text(' Skip', style: AppStyle.style14Semibold)),
             ),
           ),
         ],

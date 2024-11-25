@@ -30,10 +30,12 @@ class AnimatedCircleAvatar extends StatelessWidget {
           CircleAvatar(
             radius: 35.r,
             backgroundColor: const Color(0xff022D4F),
-            child: const Icon(
-              IconlyLight.arrow_right_2,
-              color: Colors.white,
-              size: 45,
+            child: const Center(
+              child: Icon(
+                IconlyLight.arrow_right_2,
+                color: Colors.white,
+                size: 45,
+              ),
             ),
           ),
         ]),

@@ -15,7 +15,7 @@ class ArcPainter extends CustomPainter {
     final arcPaint = Paint()
       ..color = const Color(0xff2ECC71) // Green color
       ..style = PaintingStyle.stroke // Stroke for the arc
-      ..strokeWidth = 8.0; // Increased thickness for a larger arc appearance
+      ..strokeWidth = 6.0; // Increased thickness for a larger arc appearance
 
     // Define the bounding box for the arcs
     final rect = Rect.fromCircle(center: center, radius: radius);

@@ -82,7 +82,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     cubit.goToNextPage(
                       controller: _controller,
                     );
-                    print("currentPage : " '$currentPage');
                   },
                 ),
               ),

@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
             ),
             Text('Start Your Online Course Journey Today!',
                 style: AppStyle.style15Semibold),
-            SizedBox(height: 90.h),
+            SizedBox(height: 150.h),
 
             Center(
               child: Image.asset(
@@ -48,7 +48,7 @@ class SplashScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 CircleAvatar(
-                    radius: 30,
+                    radius: 30.r,
                     backgroundColor: AppColors.kmainColor,
                     child: IconButton(
                         onPressed: () {
@@ -57,7 +57,7 @@ class SplashScreen extends StatelessWidget {
                               MaterialPageRoute(
                                 builder: (context) => BlocProvider(
                                   create: (context) => OnboadingCubit(),
-                                  child: OnboardingScreen(),
+                                  child: const OnboardingScreen(),
                                 ),
                               ));
                         },
@@ -67,8 +67,8 @@ class SplashScreen extends StatelessWidget {
                           //     const Color.fromARGB(255, 209, 209, 209),
                           backgroundColor: const Color(0xff92E3A9),
                           child: const Icon(
-                            IconlyBold.arrow_right_3,
-                            color: Colors.black,
+                            IconlyLight.arrow_right_2,
+                            color: Colors.white,
                             size: 30,
                           ),
                         ))),
