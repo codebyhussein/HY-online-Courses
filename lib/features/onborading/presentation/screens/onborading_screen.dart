@@ -6,6 +6,7 @@ import 'package:iconly/iconly.dart';
 import 'package:rokna/core/colors.dart';
 import 'package:rokna/features/onborading/data/onborading_data.dart';
 import 'package:rokna/features/onborading/presentation/cubit/onboading_cubit.dart';
+import 'package:rokna/features/onborading/presentation/screens/get_started_screen.dart';
 import 'package:rokna/features/onborading/presentation/screens/onboarding_content.dart';
 import 'package:rokna/features/onborading/presentation/widgets/custom_progress_button.dart';
 import 'package:rokna/features/onborading/presentation/widgets/skip_button.dart';
@@ -82,6 +83,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     cubit.goToNextPage(
                       controller: _controller,
                     );
+                    if (currentPage == 3) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const GetStartedScreen()));
+                    }
                   },
                 ),
               ),
