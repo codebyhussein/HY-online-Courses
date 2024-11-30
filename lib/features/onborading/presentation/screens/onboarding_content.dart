@@ -23,7 +23,7 @@ class OnboardingContent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Text(page.description,
-              textAlign: TextAlign.center, style: AppStyle.style15Semibold),
+              textAlign: TextAlign.center, style: AppStyle.style16Semibold),
         ),
       ],
     );

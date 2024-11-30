@@ -45,7 +45,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(description,
-                  textAlign: TextAlign.center, style: AppStyle.style15Semibold),
+                  textAlign: TextAlign.center, style: AppStyle.style16Semibold),
             ),
             SizedBox(height: 60.h),
             BlocBuilder<OnboadingCubit, OnboadingState>(

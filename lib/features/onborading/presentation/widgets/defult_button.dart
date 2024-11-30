@@ -25,8 +25,8 @@ class DefultButton extends StatelessWidget {
         child: Center(
           child: Text(text,
               style: isSelected
-                  ? AppStyle.style15Semibold.copyWith(color: Colors.white)
-                  : AppStyle.style15Semibold),
+                  ? AppStyle.style16Semibold.copyWith(color: Colors.white)
+                  : AppStyle.style16Semibold),
         ),
       ),
     );
