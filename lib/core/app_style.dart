@@ -11,7 +11,7 @@ class AppStyle {
   );
 
   static TextStyle style16Semibold = TextStyle(
-      fontSize: 16.sp, // Adjust size based on your design
+      fontSize: 14.sp, // Adjust size based on your design
       color: AppColors.mainTextColor,
       fontFamily: 'PlusJakartaSans Regular',
       fontWeight: FontWeight.normal);

@@ -42,9 +42,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         decoration: InputDecoration(
             filled: true,
             fillColor: AppColors.secondaryColor,
+            focusColor: AppColors.kmainColor,
             border: OutlineInputBorder(
                 borderSide:
-                    const BorderSide(color: Color(0xffDEDEDE), width: 0.42),
+                    const BorderSide(color: Color(0xffF4F4F4), width: 0.42),
                 borderRadius: BorderRadius.circular(10.r)),
             // prefixIconColor: Colors.black,
             prefixIcon: widget.prefixIcon,

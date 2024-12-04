@@ -16,8 +16,8 @@ class SkipButton extends StatelessWidget {
           TextButton(
             onPressed: onPressed,
             child: Container(
-              width: 61.w,
-              height: 37.h,
+              width: 64.w,
+              height: 40.h,
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               decoration: ShapeDecoration(
                 color: AppColors.secondaryColor,
