@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rokna/core/app_style.dart';
 
 class OrRegisterWidget extends StatelessWidget {
-  const OrRegisterWidget({super.key});
-
+  const OrRegisterWidget({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -22,7 +22,7 @@ class OrRegisterWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
                 horizontal: 8.0), // Add some spacing around the text
             child: Text(
-              'Or Register With',
+              title,
               style: AppStyle.style14Semibold,
             ),
           ),

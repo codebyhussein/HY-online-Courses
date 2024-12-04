@@ -5,6 +5,7 @@ import 'package:rokna/core/app_const.dart';
 import 'package:rokna/core/app_style.dart';
 import 'package:rokna/core/colors.dart';
 import 'package:rokna/core/widgets/CustomTextFormField.dart';
+import 'package:rokna/core/widgets/defult_button.dart';
 import 'package:rokna/features/login/presentation/screens/login_screen.dart';
 import 'package:rokna/features/register/presentation/widgets/or_register_widget.dart';
 import 'package:rokna/features/register/presentation/widgets/social_media.dart';
@@ -129,21 +130,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
             SizedBox(
               height: 34.h,
             ),
-            Container(
-              decoration: AppStyle.contanierDecorationSelected,
-              height: 43.h,
-              width: 317.w,
-              child: Center(
-                child: Text(
-                  'REGISTER',
-                  style: AppStyle.style16Semibold.copyWith(color: Colors.white),
-                ),
-              ),
+            DefultAppButton(
+              title: 'REGISTER',
+              onTap: () {},
             ),
             SizedBox(
               height: 34.h,
             ),
-            const OrRegisterWidget(),
+            const OrRegisterWidget(
+              title: 'Or Register With',
+            ),
             SizedBox(
               height: 15.h,
             ),
