@@ -2,7 +2,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rokna/core/app_style.dart';
+import 'package:rokna/core/helper/extensions.dart';
+import 'package:rokna/core/networking/routes.dart';
 import 'package:rokna/core/widgets/CustomTextFormField.dart';
+import 'package:rokna/features/login/presentation/widgets/forget_password_button.dart';
+import 'package:rokna/features/password/presentation/screens/reset_password_screen.dart';
 import 'package:rokna/features/register/presentation/screens/register_screen.dart';
 import 'package:rokna/features/register/presentation/widgets/or_register_widget.dart';
 import 'package:rokna/features/register/presentation/widgets/social_media.dart';
@@ -79,11 +83,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       : const Icon(Icons.visibility)),
             ),
             SizedBox(
+              height: 19.h,
+            ),
+            ForgetPasswordButton(onTap: () {
+              context.pushNamed(Routes.resetPasswordScreen);
+            }),
+            SizedBox(
               height: 34.h,
             ),
             DefultAppButton(
               title: 'SIGN IN',
-              onTap: () {},
+              onTap: () {
+                context.pushNamed(Routes.homeScreen);
+              },
             ),
             SizedBox(
               height: 34.h,
@@ -127,12 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const RegisterScreen(),
-                          ),
-                        );
+                        context.pushNamed(Routes.registerScreen);
                       },
                   ),
                 ],

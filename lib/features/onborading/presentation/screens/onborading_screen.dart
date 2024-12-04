@@ -4,12 +4,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 import 'package:rokna/core/colors.dart';
+import 'package:rokna/core/helper/extensions.dart';
 import 'package:rokna/features/onborading/data/onborading_data.dart';
 import 'package:rokna/features/onborading/presentation/cubit/onboading_cubit.dart';
 import 'package:rokna/features/onborading/presentation/screens/get_started_screen.dart';
 import 'package:rokna/features/onborading/presentation/screens/onboarding_content.dart';
 import 'package:rokna/features/onborading/presentation/widgets/custom_progress_button.dart';
 import 'package:rokna/features/onborading/presentation/widgets/skip_button.dart';
+
+import '../../../../core/networking/routes.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -84,10 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       controller: _controller,
                     );
                     if (currentPage == 3) {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const GetStartedScreen()));
+                      context.pushNamed(Routes.getStartedScreen);
                     }
                   },
                 ),

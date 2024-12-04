@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rokna/core/app_const.dart';
 import 'package:rokna/core/app_style.dart';
-import 'package:rokna/core/colors.dart';
+
+import 'package:rokna/core/helper/extensions.dart';
+import 'package:rokna/core/networking/routes.dart';
 import 'package:rokna/core/widgets/CustomTextFormField.dart';
 import 'package:rokna/core/widgets/defult_button.dart';
-import 'package:rokna/features/login/presentation/screens/login_screen.dart';
+
 import 'package:rokna/features/register/presentation/widgets/or_register_widget.dart';
 import 'package:rokna/features/register/presentation/widgets/social_media.dart';
 
@@ -132,7 +134,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             DefultAppButton(
               title: 'REGISTER',
-              onTap: () {},
+              onTap: () {
+                context.pushNamed(Routes.homeScreen);
+              },
             ),
             SizedBox(
               height: 34.h,
@@ -176,12 +180,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginScreen(),
-                          ),
-                        );
+                        context.pushNamed(Routes.loginScreen);
                       },
                   ),
                 ],

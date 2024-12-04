@@ -44,7 +44,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             fillColor: AppColors.secondaryColor,
             border: OutlineInputBorder(
                 borderSide:
-                    const BorderSide(color: Color(0xff858383), width: 0.42),
+                    const BorderSide(color: Color(0xffDEDEDE), width: 0.42),
                 borderRadius: BorderRadius.circular(10.r)),
             // prefixIconColor: Colors.black,
             prefixIcon: widget.prefixIcon,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rokna/core/helper/extensions.dart';
+import 'package:rokna/core/networking/routes.dart';
 import 'package:rokna/features/onborading/presentation/screens/onborading_screen.dart';
 
 import '../onborading/presentation/cubit/onboading_cubit.dart';
@@ -30,14 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future _goToNextPage() async {
     await Future.delayed(const Duration(seconds: 1), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) {
-          return BlocProvider(
-            create: (context) => OnboadingCubit(),
-            child: const OnboardingScreen(),
-          );
-        },
-      ));
+      context.pushNamed(Routes.onBoardingScreen);
     });
   }
 }

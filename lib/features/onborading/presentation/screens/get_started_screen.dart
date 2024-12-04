@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rokna/core/helper/extensions.dart';
+import 'package:rokna/core/networking/routes.dart';
 import 'package:rokna/features/login/presentation/cubit/login_cubit.dart';
 import 'package:rokna/features/login/presentation/screens/login_screen.dart';
 import 'package:rokna/features/onborading/presentation/cubit/onboading_cubit.dart';
@@ -65,14 +67,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                       DefultButton(
                         onTap: () {
                           cubit.toggleSelection(isSelected);
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => BlocProvider(
-                                  create: (context) => LoginCubit(),
-                                  child: const LoginScreen(),
-                                ),
-                              ));
+                          context.pushNamed(Routes.loginScreen);
                         },
                         text: 'SIGN IN',
                         isSelected: !isSelected,
@@ -80,14 +75,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
                       DefultButton(
                         onTap: () {
                           cubit.toggleSelection(isSelected);
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => BlocProvider(
-                                  create: (context) => RegisterCubit(),
-                                  child: const RegisterScreen(),
-                                ),
-                              ));
+                          context.pushNamed(Routes.registerScreen);
                         },
                         text: 'REGISTER',
                         isSelected: isSelected,
