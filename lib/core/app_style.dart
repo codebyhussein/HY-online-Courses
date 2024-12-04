@@ -25,8 +25,8 @@ class AppStyle {
   );
 
   static TextStyle style30Semibold = TextStyle(
-    fontSize: 30.sp,
-    fontWeight: FontWeight.w600,
+    fontSize: 33.sp,
+    fontWeight: FontWeight.bold,
     fontFamily: "PlusJakartaSans",
     color: AppColors.mainTextColor,
   );
