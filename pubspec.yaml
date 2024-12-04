@@ -38,6 +38,7 @@ dependencies:
   flutter_bloc: ^8.1.6
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.15
+  flutter_verification_code: ^1.1.7
   iconly: ^1.0.1
   page_transition: ^2.1.0
 
@@ -73,7 +74,7 @@ flutter:
       fonts:
         - asset: assets/fonts/PlusJakartaSans-SemiBold.ttf
 
-  #         style: italic
+    #         style: italic
     - family: PlusJakartaSans Regular
       fonts:
         - asset: assets/fonts/PlusJakartaSans-Regular.ttf
